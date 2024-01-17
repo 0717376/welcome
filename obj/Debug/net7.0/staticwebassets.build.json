@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "saKTN/FrjsQTGS9UQRcBcgPhifHcndHhkLtfrfP3fA0=",
+  "Source": "welcomeApp",
+  "BasePath": "_content/welcomeApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "welcomeApp/wwwroot",
+      "Source": "welcomeApp",
+      "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
+      "BasePath": "_content/welcomeApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
