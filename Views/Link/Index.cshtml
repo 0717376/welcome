@@ -2,74 +2,73 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Добро пожаловать в компанию, @Model.Name!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .container {
-            width: 80%;
-            max-width: 800px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3, h4, h5, h6, p {
-            color: #333;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать в нашу компанию!</title>
+    <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Добро пожаловать в нашу компанию, @Model.Name!</h1>
-        <h2>Контакты наставника</h2>
-        <p>Имя: [Имя наставника]</p>
-        <p>Телефон: [Телефон]</p>
-        <p>Email: [Email]</p>
+    <header>
+        <div>
+            <h1>Привет, @Model.Employee?.Name!</h1>
+            <p>Добро пожаловать в нашу компанию!</p>
+            <p>Мы рады видеть вас среди нас и желаем успехов!</p>
+        </div>
+        <div class="logo-container">
+            <img src="/images/logo1.svg" alt="Логотип Европлан">
+            <!-- <img src="/images/logo2.png" alt="Логотип Леасофт"> -->
+        </div>
+    </header>
+    <section id="mentor">
+        <h2>Твой наставник</h2>
+        <p>Имя: @Model.Mentor?.Name</p>
+        <p>Телефон: @Model.Mentor?.Phone</p>
+        <a href="@Model.Mentor?.MessengerLink">Связаться в мессенджере</a>
+    </section>
 
-        <h2>Как пройти в офис</h2>
-        <p>[Инструкции по проходу]</p>
+    <section id="work-preparation">
+        <h2>Оформление</h2>
+        <p>Мы ждем тебя на оформлении документов @Model.WorkStart?.StartDateTime. <a href="#">Добавить в календарь</a></p>
+        <div id="office-directions">
+            <h3>Как пройти в офис ({регион выхода на работу})</h3>
+            <!-- Вставка карты -->
+        </div>
+        <div id="document-checklist">
+            <h3>Документы для оформления</h3>
+            <ul>
+                <!-- JavaScript для чек-листа -->
+            </ul>
+        </div>
+    </section>
 
-        <h2>Важные документы для оформления</h2>
+    <section id="first-day">
+        <h2>Первый рабочий день ({Регион выхода на работу})</h2>
         <ul>
-            <li>Паспорт</li>
-            <li>Трудовая книжка</li>
-            <li>...</li>
-        </ul>
-
-        <h2>Первый рабочий день</h2>
-        <ol>
             <li>Оформление</li>
             <li>Встреча с наставником</li>
             <li>Экскурсия по офису</li>
             <li>Знакомство с компанией</li>
-        </ol>
-
-        <h2>FAQ</h2>
-        <ul>
-            <li>Как долго подписывается договор?</li>
-            <li>Как можно получить банковскую карту?</li>
-            <li>...</li>
         </ul>
-        @if (Model.Region == 77)
-        {
-            <p>Как похорошела Москва при Собянине!</p>
-        }
-    
-    <p>This link will expire on: @Model.ExpirationDate.ToLocalTime()</p>
-    </div>
+    </section>
+
+    <section id="faq">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <h3>Как долго подписывается договор?</h3>
+            <p class="answer">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Как можно получить банковскую карту?</h3>
+            <p class="answer">Ответ на вопрос</p>
+        </div>
+    </section>
+
+    <footer>
+        <button id="print-page">Распечатать страницу</button>
+    </footer>
+
+    <script src="/js/script.js"></script>
 </body>
 </html>

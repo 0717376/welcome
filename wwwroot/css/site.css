@@ -1,0 +1,141 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header, section, footer {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.logo-container {
+    margin-left: auto; /* Выравнивание логотипа по правому краю */
+}
+
+.logo-container img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+/* Стилизация заголовков */
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Стилизация ссылок */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стилизация чек-листа */
+#document-checklist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#document-checklist ul li {
+    background: #f6f6f6;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Стилизация контейнера для вопроса FAQ */
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Стилизация заголовков вопросов FAQ */
+.faq-item h3 {
+    font-size: 1em;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
+
+/* Добавляем значок для раскрывающегося вопроса */
+.faq-item h3::after {
+    content: '\25BC';
+    font-size: 0.8em;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Изменяем значок, когда вопрос раскрыт */
+.faq-item h3.active::after {
+    content: '\25B2';
+}
+
+/* Стилизация ответов FAQ */
+.answer {
+    font-size: 0.9em;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0; /* Гарантируем, что скрытый ответ не занимает места */
+    padding: 0; /* Убираем внутренние отступы для скрытого ответа */
+    margin-top: 0; /* Убираем верхний отступ */
+}
+
+.faq-item h3.active + .answer {
+    max-height: 500px; /* Максимальная высота для видимого содержимого */
+    padding: 5px 10px; /* Внутренние отступы для видимого ответа */
+    margin-top: 5px; /* Верхний отступ для видимого ответа */
+}
+
+
+
+/* Кнопка печати */
+#print-page {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#office-directions, #first-day {
+    margin-top: 20px;
+}
+
+/* Адаптивный дизайн */
+@media only screen and (max-width: 600px) {
+    header, section, footer {
+        margin: 10px;
+        padding: 10px;
+    }
+}

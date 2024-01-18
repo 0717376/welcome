@@ -26,3 +26,4 @@
 /Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/obj/Debug/net7.0/welcomeApp.pdb
 /Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/obj/Debug/net7.0/welcomeApp.genruntimeconfig.cache
 /Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/obj/Debug/net7.0/ref/welcomeApp.dll
+/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/obj/Debug/net7.0/welcomeApp.sourcelink.json

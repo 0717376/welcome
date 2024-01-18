@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "saKTN/FrjsQTGS9UQRcBcgPhifHcndHhkLtfrfP3fA0=",
+  "Hash": "yBkKd/nY/AItKsy79xaSfismLzhBQ+Dq93ciZkS8GJw=",
   "Source": "welcomeApp",
   "BasePath": "_content/welcomeApp",
   "Mode": "Default",
@@ -15,5 +15,82 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/css/site.css",
+      "SourceId": "welcomeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
+      "BasePath": "_content/welcomeApp",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo1.svg",
+      "SourceId": "welcomeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
+      "BasePath": "_content/welcomeApp",
+      "RelativePath": "images/logo1.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/logo1.svg"
+    },
+    {
+      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo2.png",
+      "SourceId": "welcomeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
+      "BasePath": "_content/welcomeApp",
+      "RelativePath": "images/logo2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/logo2.png"
+    },
+    {
+      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/js/script.js",
+      "SourceId": "welcomeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
+      "BasePath": "_content/welcomeApp",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/script.js"
+    }
+  ]
 }

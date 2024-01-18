@@ -14,15 +14,13 @@ namespace welcomeApp.Services
             var linkItem = new LinkItem
             {
                 Guid = Guid.NewGuid(),
-                Name = request.Name,
-                City = request.City,
-                Region = request.Region,
+                Employee = request.Employee,
+                Mentor = request.Mentor,
+                WorkStart = request.WorkStart,
                 ExpirationDate = DateTime.UtcNow.AddDays(LinkDurationDays)
             };
 
             _links.Add(linkItem.Guid, linkItem);
-
-            // Здесь можно добавить логику удаления устаревших ссылок
 
             return linkItem;
         }
