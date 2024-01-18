@@ -120,10 +120,26 @@ a:hover {
     margin-top: 20px;
 }
 
-/* Адаптивный дизайн */
+#office-directions {
+    margin-top: 20px;
+    /* Дополнительные стили для адаптивного дизайна и закругленных углов */
+}
+
+#map {
+    width: 100%; /* Адаптивная ширина */
+    height: 400px; /* Фиксированная высота */
+    border-radius: 10px; /* Закругленные углы */
+    margin: 0 auto; /* Центрирование и внешние отступы */
+}
+
+/* Адаптивный дизайн для меньших экранов */
 @media only screen and (max-width: 600px) {
     header, section, footer {
         margin: 10px;
         padding: 10px;
+    }
+    
+    #map {
+        height: 300px; /* Можно уменьшить высоту карты на меньших экранах */
     }
 }
