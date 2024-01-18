@@ -8,18 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Добро пожаловать в нашу компанию!</title>
     <link rel="stylesheet" href="/css/site.css">
+    <script src="https://api-maps.yandex.ru/v3/?apikey=800741d9-0257-4522-a255-aa6608f4fe44&lang=ru_RU"></script>
+    <script src="/js/script.js"></script>
 </head>
 <body>
+    
     <header>
+        <div class="logo-container">
+            <img src="/images/logo1.svg" alt="Логотип Европлан">
+            <!-- <img src="/images/logo2.png" alt="Логотип Леасофт"> -->
+        </div>
         <div>
             <h1>Привет, @Model.Employee?.Name!</h1>
             <p>Добро пожаловать в нашу компанию!</p>
             <p>Мы рады видеть вас среди нас и желаем успехов!</p>
         </div>
-        <div class="logo-container">
-            <img src="/images/logo1.svg" alt="Логотип Европлан">
-            <!-- <img src="/images/logo2.png" alt="Логотип Леасофт"> -->
-        </div>
+
     </header>
     <section id="mentor">
         <h2>Твой наставник</h2>
@@ -32,8 +36,8 @@
         <h2>Оформление</h2>
         <p>Мы ждем тебя на оформлении документов @Model.WorkStart?.StartDateTime. <a href="#">Добавить в календарь</a></p>
         <div id="office-directions">
-            <h3>Как пройти в офис ({регион выхода на работу})</h3>
-            <!-- Вставка карты -->
+            <h3>Как пройти в офис</h3>
+            <div id="map" style="width: 600px; height: 400px"></div>
         </div>
         <div id="document-checklist">
             <h3>Документы для оформления</h3>
@@ -44,7 +48,7 @@
     </section>
 
     <section id="first-day">
-        <h2>Первый рабочий день ({Регион выхода на работу})</h2>
+        <h2>Как пройдет твой первый рабочий день</h2>
         <ul>
             <li>Оформление</li>
             <li>Встреча с наставником</li>

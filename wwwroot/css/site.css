@@ -16,25 +16,13 @@ header, section, footer {
     border-radius: 10px;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 10px;
-}
-
-.logo-container {
-    margin-left: auto; /* Выравнивание логотипа по правому краю */
-}
-
-.logo-container img {
+/* Стилизация логотипов */
+img {
     max-width: 150px;
     height: auto;
+    margin: 10px;
+    float:right;
 }
-
 
 /* Стилизация заголовков */
 h1, h2, h3 {
