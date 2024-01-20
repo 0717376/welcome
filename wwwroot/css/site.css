@@ -49,6 +49,45 @@ a:hover {
     text-decoration: underline;
 }
 
+#first-day .day-part h3 {
+    margin-top: 15px; /* Дополнительный отступ сверху */
+    margin-bottom: 15px; /* Отступ снизу для разделения заголовка и содержимого */
+}
+
+#first-day .day-part p {
+    text-align: justify; /* Выравнивание текста по обеим сторонам */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#first-day .day-part {
+    display: block; /* Изменение на block для нормального обтекания */
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: auto; /* Для корректного обтекания float элементами */
+}
+
+#first-day .day-part img {
+    float: right; /* Расположение изображения справа */
+    width: 50%; /* Ширина изображения */
+    max-width: 100%; /* Убедитесь, что изображение не выходит за пределы своего размера */
+    height: auto;
+    margin-left: 30px; /* Отступ между изображением и текстом */
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* Адаптивные стили для мобильных устройств */
+    #first-day .day-part img {
+        float: none; /* Отмена обтекания на маленьких экранах */
+        width: 100%; /* Изображение занимает всю ширину на мобильных устройствах */
+        margin-left: 0; /* Убрать левый отступ */
+    }
+}
+
 /* Стилизация контейнера чек-листа документов */
 .document-checklist-container {
     border: 1px solid #ddd;
