@@ -67,7 +67,7 @@ document.styleSheets[0].insertRule('.show { display: block; }', 0);
 
 async function initMap() {
     await ymaps3.ready;
-    const {YMap, YMapDefaultSchemeLayer, YMapMarker} = ymaps3;
+    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
 
     // Инициализация карты
     const map = new YMap(
@@ -77,10 +77,12 @@ async function initMap() {
                 center: [37.620021, 55.728144],
                 zoom: 16
             }
-        }
+        },
+        [
+            new YMapDefaultSchemeLayer(),
+            new YMapDefaultFeaturesLayer()
+        ]
     );
-
-    map.addChild(new YMapDefaultSchemeLayer());
 
     // Создание метки
     const markerElement = document.createElement('img');
