@@ -221,11 +221,14 @@ a:hover {
     border-radius: 10px; /* Закругленные углы */
     margin: 0 auto; /* Центрирование */
     margin-bottom: 20px; /* Отступ снизу */
-    -moz-border-radius: 14px 14px 14px 14px; /* Firefox */
-    -webkit-border-radius: 14px 14px 14px 14px; /* Safari, Chrome */
-    -khtml-border-radius: 14px 14px 14px 14px; /* KHTML */
-    border-radius: 14px 14px 14px 14px; /* CSS3 */
 }
+
+#map > ymaps {
+    border-radius: 10px;
+    overflow: hidden;
+    }
+
+
 /* Адаптивный дизайн для меньших экранов */
 @media only screen and (max-width: 800px) {
     header, section, footer {
