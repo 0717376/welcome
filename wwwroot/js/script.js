@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Обработчик для заголовка чек-листа документов
+    const checklistTitle = document.getElementById('document-checklist-title');
+    checklistTitle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const checklist = this.nextElementSibling;
+
+        if (checklist.style.maxHeight && checklist.style.maxHeight !== "0px") {
+            checklist.style.maxHeight = "0px";
+        } else {
+            checklist.style.maxHeight = checklist.scrollHeight + "px";
+        }
+    });
+    
     // Чек-лист документов
     const checklistItems = [
         'Паспорт или временное удостоверение личности',
@@ -31,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         checklist.appendChild(li);
     });
-
+    
     function updateLocalStorage() {
         const checkedItems = document.querySelectorAll('#document-checklist ul li.checked');
         const checkedIndexes = Array.from(checkedItems).map(item => checklistItems.indexOf(item.textContent));

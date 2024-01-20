@@ -34,6 +34,10 @@ h4 {
     margin-bottom: 5px;
 }
 
+p {
+    padding-left: 20px; 
+}
+
 
 /* Стилизация ссылок */
 a {
@@ -45,19 +49,52 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Стилизация чек-листа */
-#document-checklist ul {
-    list-style-type: none;
-    padding: 0;
+/* Стилизация контейнера чек-листа документов */
+.document-checklist-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-#document-checklist ul li {
-    background: #f8f8f8;
-    margin: 3px 15px; 
-    padding: 5px; 
-    border-radius: 3px; 
+/* Стилизация заголовка чек-листа документов */
+.document-checklist-container h3 {
+    font-size: 1em;
+    margin: 0;
     cursor: pointer;
-    font-size: 0.9em; 
+    position: relative;
+    padding: 10px;
+    
+    
+}
+
+.document-checklist-container h3::after {
+    content: '\25BC';
+    font-size: 0.8em;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.document-checklist-container h3.active::after {
+    content: '\25B2';
+}
+
+/* Стилизация чек-листа документов */
+#document-checklist {
+    font-size: 0.9em;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    padding: 0;
+    margin-top: 0;
+}
+
+.document-checklist-container h3.active + #document-checklist {
+    max-height: 500px;
+    padding: 5px 10px;
+    margin-top: 5px;
 }
 
 
@@ -110,6 +147,7 @@ a:hover {
     max-height: 0; /* Гарантируем, что скрытый ответ не занимает места */
     padding: 0; /* Убираем внутренние отступы для скрытого ответа */
     margin-top: 0; /* Убираем верхний отступ */
+    margin-bottom: 0;
 }
 
 .faq-item h3.active + .answer {
