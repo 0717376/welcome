@@ -216,11 +216,15 @@ a:hover {
 }
 
 #map {
-    width: 90%; /* Уменьшение ширины до 90% */
+    width: 100%; /* Уменьшение ширины до 90% */
     height: 360px; /* Пропорциональное уменьшение высоты */
     border-radius: 10px; /* Закругленные углы */
     margin: 0 auto; /* Центрирование */
     margin-bottom: 20px; /* Отступ снизу */
+    -moz-border-radius: 14px 14px 14px 14px; /* Firefox */
+    -webkit-border-radius: 14px 14px 14px 14px; /* Safari, Chrome */
+    -khtml-border-radius: 14px 14px 14px 14px; /* KHTML */
+    border-radius: 14px 14px 14px 14px; /* CSS3 */
 }
 /* Адаптивный дизайн для меньших экранов */
 @media only screen and (max-width: 800px) {
