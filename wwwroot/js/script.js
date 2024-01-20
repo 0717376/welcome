@@ -65,8 +65,6 @@ document.styleSheets[0].insertRule('.checked { text-decoration: line-through; }'
 document.styleSheets[0].insertRule('.show { display: block; }', 0);
 
 
-initMap();
-
 async function initMap() {
     // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
@@ -82,14 +80,36 @@ async function initMap() {
         {
             location: {
                 // Координаты центра карты
-                center: [37.588144, 55.733842],
+                center: [55.728144, 37.620021],
 
                 // Уровень масштабирования
-                zoom: 16
+                zoom: 15
             }
         }
     );
 
     // Добавляем слой для отображения схематической карты
     map.addChild(new YMapDefaultSchemeLayer());
+
+    // Создаем метку
+    const myPlacemark = new ymaps3.Placemark(
+        // Координаты, где будет расположена метка 
+        [55.728144, 37.620021], 
+        {}, 
+        {
+            // Путь к изображению
+            iconLayout: 'default#image',
+            iconImageHref: 'images/pin_x2.png', 
+            // Размеры изображения в пикселях
+            iconImageSize: [30, 42], 
+            // Сдвиг относительно верхнего левого угла
+            iconImageOffset: [-15, -42] 
+        }
+    );
+
+    // Добавляем метку на карту
+    map.addChild(myPlacemark);
+
 }
+
+initMap();

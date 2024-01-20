@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/images/logo2.png"
     },
     {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/pin_x2.png",
+      "PackagePath": "staticwebassets/images/pin_x2.png"
+    },
+    {
       "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/js/script.js",
       "PackagePath": "staticwebassets/js/script.js"
     },

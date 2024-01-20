@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yBkKd/nY/AItKsy79xaSfismLzhBQ+Dq93ciZkS8GJw=",
+  "Hash": "lfaoj9ccXs7IZYJC05NoLkq8pouvhIzljJqqM6xdXbs=",
   "Source": "welcomeApp",
   "BasePath": "_content/welcomeApp",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/logo2.png"
+    },
+    {
+      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/pin_x2.png",
+      "SourceId": "welcomeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
+      "BasePath": "_content/welcomeApp",
+      "RelativePath": "images/pin_x2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/pin_x2.png"
     },
     {
       "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/js/script.js",
