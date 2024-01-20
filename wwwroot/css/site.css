@@ -86,6 +86,15 @@ a:hover {
     transform: translateY(-50%);
 }
 
+.icon-marker {
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
 /* Изменяем значок, когда вопрос раскрыт */
 .faq-item h3.active::after {
     content: '\25B2';
