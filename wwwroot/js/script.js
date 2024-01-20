@@ -64,38 +64,33 @@ document.addEventListener('DOMContentLoaded', function() {
 document.styleSheets[0].insertRule('.checked { text-decoration: line-through; }', 0);
 document.styleSheets[0].insertRule('.show { display: block; }', 0);
 
+initMap();
 
 async function initMap() {
+    // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
-    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
 
-    // Инициализация карты
+    const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+
+    // Иницилиазируем карту
     const map = new YMap(
+        // Передаём ссылку на HTMLElement контейнера
         document.getElementById('map'),
+
+        // Передаём параметры инициализации карты
         {
             location: {
-                center: [37.620021, 55.728144],
+                // Координаты центра карты
+                center: [37.588144, 55.733842],
+
+                // Уровень масштабирования
                 zoom: 16
             }
-        },
-        [
-            new YMapDefaultSchemeLayer(),
-            new YMapDefaultFeaturesLayer()
-        ]
+        }
     );
 
-    // Создание метки
-    const markerElement = document.createElement('img');
-    markerElement.src = '/images/pin_x2.png';
-    markerElement.style.width = '30px';  // Размеры иконки
-    markerElement.style.height = '30px';
-
-    // Координаты, где будет размещена метка
-    const markerCoordinates = [37.620021, 55.728144];
-
-    // Добавление метки на карту
-    const marker = new YMapMarker({coordinates: markerCoordinates}, markerElement);
-    map.addChild(marker);
+    // Добавляем слой для отображения схематической карты
+    map.addChild(new YMapDefaultSchemeLayer());
 }
 
-initMap();
+
