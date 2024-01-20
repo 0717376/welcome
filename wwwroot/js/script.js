@@ -86,8 +86,8 @@ async function initMap() {
     // Создание метки
     const markerElement = document.createElement('img');
     markerElement.src = '/images/pin_x2.png';
-    markerElement.style.width = '100%';  // Размеры иконки
-    markerElement.style.height = '100%';
+    markerElement.style.width = '300%';  // Размеры иконки
+    markerElement.style.height = '300%';
 
     // Координаты, где будет размещена метка
     const markerCoordinates = [37.620021, 55.728144];
