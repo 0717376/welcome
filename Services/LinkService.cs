@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using welcomeApp.Models;
+using System.Text;
 
 namespace welcomeApp.Services
 {
@@ -37,6 +38,29 @@ namespace welcomeApp.Services
             }
 
             return null;
+        }
+        // Метод генерации ics
+        public string GenerateCalendarEvent(LinkItem linkItem)
+        {
+            if (linkItem?.WorkStart?.StartDateTime == null)
+            {
+                throw new ArgumentNullException(nameof(linkItem.WorkStart.StartDateTime), "StartDateTime не может быть null.");
+            }
+
+            var startDateTime = linkItem.WorkStart.StartDateTime;
+
+            var sb = new StringBuilder();
+            sb.AppendLine("BEGIN:VCALENDAR");
+            sb.AppendLine("VERSION:2.0");
+            sb.AppendLine("BEGIN:VEVENT");
+            sb.AppendLine($"DTSTART:{startDateTime.ToUniversalTime():yyyyMMddTHHmmssZ}");
+            sb.AppendLine($"DTEND:{startDateTime.AddHours(1).ToUniversalTime():yyyyMMddTHHmmssZ}");
+            sb.AppendLine($"SUMMARY:Оформление документов в Европлан");
+            sb.AppendLine("DESCRIPTION:Встреча для оформления документов нового сотрудника.");
+            sb.AppendLine("END:VEVENT");
+            sb.AppendLine("END:VCALENDAR");
+
+            return sb.ToString();
         }
     }
 }

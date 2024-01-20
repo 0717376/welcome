@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using welcomeApp.Models;
 using welcomeApp.Services;
 using System;
+using System.Text;
 
 namespace welcomeApp.Controllers
 {
@@ -42,6 +43,20 @@ namespace welcomeApp.Controllers
             }
 
             return View("Index", linkItem); // Используем View "Index" с моделью linkItem
+        }
+                [HttpGet("GetCalendarFile/{guid}")]
+        
+        public IActionResult GetCalendarFile(Guid guid)
+        {
+            var linkItem = _linkService.GetLink(guid);
+            if (linkItem == null)
+            {
+                return NotFound("The link is either invalid or has expired.");
+            }
+
+            var calendarContent = _linkService.GenerateCalendarEvent(linkItem);
+            var bytes = Encoding.UTF8.GetBytes(calendarContent);
+            return File(bytes, "text/calendar", "event.ics");
         }
     }
 }

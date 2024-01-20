@@ -29,9 +29,13 @@ h1, h2, h3 {
     color: #333;
 }
 
+p {
+    padding-left: 10px;
+}
+
 /* Стилизация ссылок */
 a {
-    color: #007bff;
+    color: #568aca;
     text-decoration: none;
 }
 
@@ -46,13 +50,12 @@ a:hover {
 }
 
 #document-checklist ul li {
-    background: #f6f6f6;
-    margin-bottom: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    background: #f8f8f8;
+    margin: 3px 15px; 
+    padding: 5px; 
+    border-radius: 3px; 
     cursor: pointer;
+    font-size: 0.9em; 
 }
 
 
@@ -122,7 +125,6 @@ a:hover {
 
 #office-directions {
     margin-top: 20px;
-    /* Дополнительные стили для адаптивного дизайна и закругленных углов */
 }
 
 #map {
@@ -133,13 +135,13 @@ a:hover {
 }
 
 /* Адаптивный дизайн для меньших экранов */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     header, section, footer {
         margin: 10px;
         padding: 10px;
     }
     
     #map {
-        height: 300px; /* Можно уменьшить высоту карты на меньших экранах */
+        height: 300px; 
     }
 }

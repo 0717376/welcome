@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Builder;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using welcomeApp.Services; // Импорт сервиса LinkService
@@ -11,6 +13,15 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<LinkService>(); // Регистрация LinkService как Singleton
 
 var app = builder.Build();
+
+// Установка культуры
+var supportedCultures = new[] { "ru-RU" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
 
 // Настройка конвейера запросов HTTP
 if (!app.Environment.IsDevelopment())
