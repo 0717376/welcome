@@ -59,14 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
         window.print();
     });
 
-    initMap();
 });
 
 // Дополнительные стили для чек-листа и FAQ
 document.styleSheets[0].insertRule('.checked { text-decoration: line-through; }', 0);
 document.styleSheets[0].insertRule('.show { display: block; }', 0);
 
-
+initMap();
 
 
 async function initMap() {
