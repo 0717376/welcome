@@ -66,30 +66,34 @@ document.styleSheets[0].insertRule('.show { display: block; }', 0);
 
 
 async function initMap() {
-    // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
     await ymaps3.ready;
+    const {YMap, YMapDefaultSchemeLayer, YMapMarker} = ymaps3;
 
-    const {YMap, YMapDefaultSchemeLayer} = ymaps3;
-
-    // Иницилиазируем карту
+    // Инициализация карты
     const map = new YMap(
-        // Передаём ссылку на HTMLElement контейнера
         document.getElementById('map'),
-
-        // Передаём параметры инициализации карты
         {
             location: {
-                // Координаты центра карты
                 center: [37.620021, 55.728144],
-
-                // Уровень масштабирования
-                zoom: 15
+                zoom: 16
             }
         }
     );
 
-    // Добавляем слой для отображения схематической карты
     map.addChild(new YMapDefaultSchemeLayer());
+
+    // Создание метки
+    const markerElement = document.createElement('img');
+    markerElement.src = '/images/pin_x2.png';
+    markerElement.style.width = '30px';  // Размеры иконки
+    markerElement.style.height = '30px';
+
+    // Координаты, где будет размещена метка
+    const markerCoordinates = [37.620021, 55.728144];
+
+    // Добавление метки на карту
+    const marker = new YMapMarker({coordinates: markerCoordinates}, markerElement);
+    map.addChild(marker);
 }
 
 initMap();
