@@ -85,9 +85,9 @@ async function initMap() {
 
     // Создание метки
     const markerElement = document.createElement('img');
-    markerElement.src = '/images/pin_x2.png';
-    markerElement.style.width = '300%';  // Размеры иконки
-    markerElement.style.height = '300%';
+    markerElement.src = 'https://yastatic.net/s3/front-maps-static/maps-front-jsapi-3/examples/images/marker-custom-icon/yellow-capybara.png';
+    markerElement.style.width = '75px';  // Размеры иконки
+    markerElement.style.height = '75px';
 
     // Координаты, где будет размещена метка
     const markerCoordinates = [37.620021, 55.728144];
