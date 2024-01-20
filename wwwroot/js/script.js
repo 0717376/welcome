@@ -65,37 +65,23 @@ document.styleSheets[0].insertRule('.checked { text-decoration: line-through; }'
 document.styleSheets[0].insertRule('.show { display: block; }', 0);
 
 
-async function initMap() {
-    await ymaps3.ready;
-    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
+ymaps.ready(init);
 
-    // Инициализация карты
-    const map = new YMap(
-        document.getElementById('map'),
-        {
-            location: {
-                center: [37.620021, 55.728144],
-                zoom: 16
-            }
-        },
-        [
-            new YMapDefaultSchemeLayer(),
-            new YMapDefaultFeaturesLayer()
-        ]
+function init(){ 
+    // Создание карты.    
+    var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        center: [55.76, 37.64], // Москва
+        // Масштаб карты.
+        zoom: 7
+    });
+
+    // Создание метки.
+    var myPlacemark = new ymaps.Placemark(
+        // Координаты метки.
+        [55.76, 37.64] // Москва
     );
 
-    // Создание метки
-    const markerElement = document.createElement('img');
-    markerElement.src = '/images/pin_x2.png';
-    markerElement.style.width = '30px';  // Размеры иконки
-    markerElement.style.height = '30px';
-
-    // Координаты, где будет размещена метка
-    const markerCoordinates = [37.620021, 55.728144];
-
-    // Добавление метки на карту
-    const marker = new YMapMarker({coordinates: markerCoordinates}, markerElement);
-    map.addChild(marker);
+    // Добавление метки на карту.
+    myMap.geoObjects.add(myPlacemark);
 }
-
-initMap();
