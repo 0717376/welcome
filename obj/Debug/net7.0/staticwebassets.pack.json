@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/1.webp",
+      "PackagePath": "staticwebassets/images/1.webp"
+    },
+    {
       "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/4ff708e7db680d80cbe3a.png",
       "PackagePath": "staticwebassets/images/4ff708e7db680d80cbe3a.png"
     },
