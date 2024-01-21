@@ -17,7 +17,7 @@ header, section, footer {
 }
 
 /* Стилизация логотипов */
-img {
+.logo-container {
     max-width: 150px;
     height: auto;
     margin: 10px;
@@ -50,41 +50,41 @@ a:hover {
 }
 
 #first-day .day-part h3 {
-    margin-top: 15px; /* Дополнительный отступ сверху */
-    margin-bottom: 15px; /* Отступ снизу для разделения заголовка и содержимого */
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #first-day .day-part p {
-    text-align: justify; /* Выравнивание текста по обеим сторонам */
+    text-align: left;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 #first-day .day-part {
-    display: block; /* Изменение на block для нормального обтекания */
-    border: 0px solid #ddd;
+    display: flex;
+    flex-direction: column; /* Элементы располагаются в колонку, картинка над текстом */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
-    overflow: auto; /* Для корректного обтекания float элементами */
+    overflow: auto;
 }
 
 #first-day .day-part img {
-    float: right; /* Расположение изображения справа */
-    width: 50%; /* Ширина изображения */
-    max-width: 100%; /* Убедитесь, что изображение не выходит за пределы своего размера */
-    height: auto;
-    margin-left: 30px; /* Отступ между изображением и текстом */
+    width: 95%; /* Картинка занимает всю доступную ширину */
+    height: 200px; /* Явно задаем высоту, чтобы уменьшить её */
+    object-fit: cover; /* Обрезает картинку, сохраняя её аспектное соотношение */
     border-radius: 10px;
+    margin-bottom: 20px; /* Отступ снизу, чтобы отделить картинку от текста */
+    margin-left: 20px;
 }
 
-
 @media only screen and (max-width: 600px) {
-    /* Адаптивные стили для мобильных устройств */
+    #first-day .day-part {
+        flex-direction: column;
+    }
     #first-day .day-part img {
-        float: none; /* Отмена обтекания на маленьких экранах */
-        width: 100%; /* Изображение занимает всю ширину на мобильных устройствах */
-        margin-left: 0; /* Убрать левый отступ */
+        height: auto; /* На мобильных устройствах высота картинки может быть автоматической */
     }
 }
 
