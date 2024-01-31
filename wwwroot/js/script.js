@@ -99,7 +99,7 @@ async function initMap() {
     // Создание метки
     const markerElement = document.createElement('img');
     markerElement.className = 'icon-marker';
-    markerElement.src = 'https://yastatic.net/s3/front-maps-static/maps-front-jsapi-3/examples/images/marker-custom-icon/yellow-capybara.png';
+    markerElement.src = '/images/logo_man.png';
     markerElement.style.width = '75px';  // Размеры иконки
     markerElement.style.height = '75px';
 

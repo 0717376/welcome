@@ -16,13 +16,27 @@ header, section, footer {
     border-radius: 10px;
 }
 
-/* Стилизация логотипов */
-.logo {
-    max-width: 150px;
-    height: auto;
-    margin: 10px;
-    float:right;
+/* Стилизация контейнера для логотипов */
+.logos-container {
+    display: flex; /* Используйте Flexbox */
+    justify-content: space-between; /* Распределение между левым и правым краями */
+    align-items: center; /* Центрирование элементов по вертикали */
+    max-width: 100%;
+    margin-bottom: 40px;
 }
+
+.logo-container-left, .logo-container-right {
+    margin: 10px; /* Внешний отступ для контейнеров логотипов */
+    max-width: 150px; /* Максимальная ширина для контейнеров логотипов */
+    height: auto;
+}
+
+/* Стилизация логотипов */
+.logo-left, .logo-right {
+    max-width: 100%; /* Логотипы адаптируются к размеру контейнера */
+    height: auto;
+}
+
 
 /* Стилизация заголовков */
 h1, h2, h3 {

@@ -14,10 +14,15 @@
 <body>
     
     <header>
-        <div class="logo-container">
-            <img class=logo src="/images/logo1.svg" alt="Логотип Европлан">
-            <!-- <img src="/images/logo2.png" alt="Логотип Леасофт"> -->
+        <div class="logos-container">
+            <div class="logo-container-left">
+                <img class="logo-right" src="/images/logo1.png" alt="Логотип Леасофт">
+            </div>
+            <div class="logo-container-right">
+                <img class="logo-left" src="/images/logo2.png" alt="Логотип Европлан">
+            </div>
         </div>
+        <div style="clear: both;"></div>
         <div>
             <h1>Привет, @Model.Employee?.Name! 👋</h1>
             <p>Добро пожаловать в нашу компанию!</p>

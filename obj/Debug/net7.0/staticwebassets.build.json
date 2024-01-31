@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TpJyKLtkNfaMgNhrgDTyK2Zp4SeG+OeBOQnFOSHh5V4=",
+  "Hash": "ZEfGJohdtDb+OQYxA4xvqwzLN1xqfGu/p9JFSQLzR9Q=",
   "Source": "welcomeApp",
   "BasePath": "_content/welcomeApp",
   "Mode": "Default",
@@ -112,12 +112,12 @@
       "OriginalItemSpec": "wwwroot/images/4.webp"
     },
     {
-      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/4ff708e7db680d80cbe3a.png",
+      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo1.png",
       "SourceId": "welcomeApp",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
       "BasePath": "_content/welcomeApp",
-      "RelativePath": "images/4ff708e7db680d80cbe3a.png",
+      "RelativePath": "images/logo1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,26 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/4ff708e7db680d80cbe3a.png"
-    },
-    {
-      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/9aed07a6a4c1e97c4c83e.png",
-      "SourceId": "welcomeApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
-      "BasePath": "_content/welcomeApp",
-      "RelativePath": "images/9aed07a6a4c1e97c4c83e.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/9aed07a6a4c1e97c4c83e.png"
+      "OriginalItemSpec": "wwwroot/images/logo1.png"
     },
     {
       "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo1.svg",

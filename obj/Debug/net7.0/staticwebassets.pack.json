@@ -21,12 +21,8 @@
       "PackagePath": "staticwebassets/images/4.webp"
     },
     {
-      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/4ff708e7db680d80cbe3a.png",
-      "PackagePath": "staticwebassets/images/4ff708e7db680d80cbe3a.png"
-    },
-    {
-      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/9aed07a6a4c1e97c4c83e.png",
-      "PackagePath": "staticwebassets/images/9aed07a6a4c1e97c4c83e.png"
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo1.png",
+      "PackagePath": "staticwebassets/images/logo1.png"
     },
     {
       "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo1.svg",
