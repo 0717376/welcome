@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets/images/logo2.png"
     },
     {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo_man.png",
+      "PackagePath": "staticwebassets/images/logo_man.png"
+    },
+    {
       "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/pin_x2.png",
       "PackagePath": "staticwebassets/images/pin_x2.png"
     },

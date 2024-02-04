@@ -4,6 +4,7 @@ namespace welcomeApp.Models
     {
         public Employee? Employee { get; set; }
         public Mentor? Mentor { get; set; }
+        public Manager? Manager { get; set; }
         public WorkStart? WorkStart { get; set; }
     }
 
@@ -18,6 +19,12 @@ namespace welcomeApp.Models
         public string? Name { get; set; }
         public string? Phone { get; set; }
         public string? MessengerLink { get; set; }
+    }
+
+    public class Manager
+    {
+        public string? Name { get; set; }
+        public string? Phone { get; set; }
     }
 
     public class WorkStart

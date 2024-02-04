@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZEfGJohdtDb+OQYxA4xvqwzLN1xqfGu/p9JFSQLzR9Q=",
+  "Hash": "UDlZuoI9bmOVwSxZTBLceDTB5vCVDj8ERv1frKe+hII=",
   "Source": "welcomeApp",
   "BasePath": "_content/welcomeApp",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/4.webp"
+    },
+    {
+      "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo_man.png",
+      "SourceId": "welcomeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/",
+      "BasePath": "_content/welcomeApp",
+      "RelativePath": "images/logo_man.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/logo_man.png"
     },
     {
       "Identity": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo1.png",

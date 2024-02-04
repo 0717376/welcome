@@ -17,6 +17,7 @@ namespace welcomeApp.Services
                 Guid = Guid.NewGuid(),
                 Employee = request.Employee,
                 Mentor = request.Mentor,
+                Manager = request.Manager,
                 WorkStart = request.WorkStart,
                 ExpirationDate = DateTime.UtcNow.AddDays(LinkDurationDays)
             };
