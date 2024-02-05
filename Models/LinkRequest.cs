@@ -26,11 +26,16 @@ namespace welcomeApp.Models
         public string? Name { get; set; }
         public string? Phone { get; set; }
     }
-
     public class WorkStart
     {
         public DateTime StartDateTime { get; set; }
         public int Region { get; set; }
+        public Office? Office { get; set; } // Убедитесь, что это свойство добавлено
+    }
+    public class Office
+    {
+        public bool IsRegional { get; set; }
+        public string? Address { get; set; }
+        public string? Direction { get; set; }
     }
 }
-

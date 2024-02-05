@@ -40,6 +40,7 @@ namespace welcomeApp.Services
 
             return null;
         }
+        
         // Метод генерации ics
         public string GenerateCalendarEvent(LinkItem linkItem)
         {

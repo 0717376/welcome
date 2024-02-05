@@ -16,6 +16,7 @@ header, section, footer {
     border-radius: 10px;
 }
 
+
 /* Стилизация контейнера для логотипов */
 .logos-container {
     display: flex; /* Используйте Flexbox */
@@ -61,6 +62,34 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Это уже есть, но можно добавить или убрать для изменения расположения */
+    gap: 0px; /* Добавляем пространство между элементами */
+}
+
+.contact {
+    background-color: #f0f0f0; /* Цвет фона */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 20px; /* Отступы внутри рамок */
+    margin: 10px; /* Отступы между элементами по вертикали и горизонтали */
+    flex: 1; /* Растягивание элементов для заполнения доступного пространства */
+    min-width: 250px; /* Минимальная ширина каждого блока, для адаптации под мобильные устройства */
+    max-width: calc(50% - 20px); /* Максимальная ширина с учетом отступов, чтобы обеспечить, что будут 2 элемента в ряд */
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+    }
+
+    .contact {
+        max-width: none; /* Убираем ограничение максимальной ширины для мобильных */
+    }
 }
 
 #first-day .day-part h3 {
@@ -209,7 +238,13 @@ a:hover {
     margin-top: 5px; /* Верхний отступ для видимого ответа */
 }
 
-
+.expiration-date {
+    max-width: 800px;
+    font-size: small;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #888888;
+}
 
 /* Кнопка печати */
 #print-page {
