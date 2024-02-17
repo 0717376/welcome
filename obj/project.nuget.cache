@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BZT1ImyQesBppSX3Qo2RQWz8JkBAjJ6L7WBFtouScIaX9SBFhbIcSWDLECEBbd5YAtC3OY4eSBBYred/3wELlQ==",
+  "dgSpecHash": "fhMznKPmKS6UbC61KeFN0E3RlskK8niLvdx9lrvwIUOFU2kxf7kjfCjXI5IYUuuupB8y8iA1FL2APDrhBSXEQw==",
   "success": true,
   "projectFilePath": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/welcomeApp.csproj",
-  "expectedPackageFiles": [
-    "/Users/sergeymuravskiy/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
-    "/Users/sergeymuravskiy/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
-    "/Users/sergeymuravskiy/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.15/microsoft.netcore.app.host.osx-arm64.7.0.15.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
