@@ -5,7 +5,7 @@ WORKDIR /src
 COPY ["welcomeApp.csproj", "./"]
 RUN dotnet restore "welcomeApp.csproj"
 COPY . .
-RUN dotnet publish "welcomeApp.csproj" -c Release -o /app/publish
+RUN dotnet publish "welcomeApp.csproj" -c Release -o /app/publish --no-restore
 
 # Использование образа ASP.NET Runtime для запуска приложения
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS final
