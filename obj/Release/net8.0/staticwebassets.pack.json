@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/1.webp",
+      "PackagePath": "staticwebassets/images/1.webp"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/2.webp",
+      "PackagePath": "staticwebassets/images/2.webp"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/3.webp",
+      "PackagePath": "staticwebassets/images/3.webp"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/4.webp",
+      "PackagePath": "staticwebassets/images/4.webp"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo1.png",
+      "PackagePath": "staticwebassets/images/logo1.png"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo1.svg",
+      "PackagePath": "staticwebassets/images/logo1.svg"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo2.png",
+      "PackagePath": "staticwebassets/images/logo2.png"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/logo_man.png",
+      "PackagePath": "staticwebassets/images/logo_man.png"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/images/pin_x2.png",
+      "PackagePath": "staticwebassets/images/pin_x2.png"
+    },
+    {
+      "Id": "/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/wwwroot/js/script.js",
+      "PackagePath": "staticwebassets/js/script.js"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.build.welcomeApp.props",
+      "PackagePath": "build\\welcomeApp.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.buildMultiTargeting.welcomeApp.props",
+      "PackagePath": "buildMultiTargeting\\welcomeApp.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.buildTransitive.welcomeApp.props",
+      "PackagePath": "buildTransitive\\welcomeApp.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.welcomeApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

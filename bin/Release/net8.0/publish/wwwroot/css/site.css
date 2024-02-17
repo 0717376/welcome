@@ -1,0 +1,294 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header, section, footer {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+
+/* Стилизация контейнера для логотипов */
+.logos-container {
+    display: flex; /* Используйте Flexbox */
+    justify-content: space-between; /* Распределение между левым и правым краями */
+    align-items: center; /* Центрирование элементов по вертикали */
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.logo-container-left, .logo-container-right {
+    margin: 10px; /* Внешний отступ для контейнеров логотипов */
+    max-width: 150px; /* Максимальная ширина для контейнеров логотипов */
+    height: auto;
+}
+
+/* Стилизация логотипов */
+.logo-left, .logo-right {
+    max-width: 100%; /* Логотипы адаптируются к размеру контейнера */
+    height: auto;
+}
+
+
+/* Стилизация заголовков */
+h1, h2, h3 {
+    color: #333;
+}
+
+h4 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+p {
+    padding-left: 20px; 
+}
+
+
+/* Стилизация ссылок */
+a {
+    color: #568aca;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Это уже есть, но можно добавить или убрать для изменения расположения */
+    gap: 0px; /* Добавляем пространство между элементами */
+}
+
+.contact {
+    background-color: #f0f0f0; /* Цвет фона */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 20px; /* Отступы внутри рамок */
+    margin: 10px; /* Отступы между элементами по вертикали и горизонтали */
+    flex: 1; /* Растягивание элементов для заполнения доступного пространства */
+    min-width: 250px; /* Минимальная ширина каждого блока, для адаптации под мобильные устройства */
+    max-width: calc(50% - 20px); /* Максимальная ширина с учетом отступов, чтобы обеспечить, что будут 2 элемента в ряд */
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+    }
+
+    .contact {
+        max-width: none; /* Убираем ограничение максимальной ширины для мобильных */
+    }
+}
+
+#first-day .day-part h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#first-day .day-part p {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#first-day .day-part {
+    display: flex;
+    flex-direction: column; /* Элементы располагаются в колонку, картинка над текстом */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+#first-day .day-part img {
+    width: 95%; /* Картинка занимает всю доступную ширину */
+    height: 200px; /* Явно задаем высоту, чтобы уменьшить её */
+    object-fit: cover; /* Обрезает картинку, сохраняя её аспектное соотношение */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Отступ снизу, чтобы отделить картинку от текста */
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    #first-day .day-part {
+        flex-direction: column;
+    }
+    #first-day .day-part img {
+        height: auto; /* На мобильных устройствах высота картинки может быть автоматической */
+    }
+}
+
+/* Стилизация контейнера чек-листа документов */
+.document-checklist-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Стилизация заголовка чек-листа документов */
+.document-checklist-container h3 {
+    font-size: 1em;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    
+    
+}
+
+.document-checklist-container h3::after {
+    content: '\25BC';
+    font-size: 0.8em;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.document-checklist-container h3.active::after {
+    content: '\25B2';
+}
+
+/* Стилизация чек-листа документов */
+#document-checklist {
+    font-size: 0.9em;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    padding: 0;
+    margin-top: 0;
+}
+
+.document-checklist-container h3.active + #document-checklist {
+    max-height: 500px;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+
+/* Стилизация контейнера для вопроса FAQ */
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Стилизация заголовков вопросов FAQ */
+.faq-item h3 {
+    font-size: 1em;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
+
+/* Добавляем значок для раскрывающегося вопроса */
+.faq-item h3::after {
+    content: '\25BC';
+    font-size: 0.8em;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-marker {
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+/* Изменяем значок, когда вопрос раскрыт */
+.faq-item h3.active::after {
+    content: '\25B2';
+}
+
+/* Стилизация ответов FAQ */
+.answer {
+    font-size: 0.9em;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0; /* Гарантируем, что скрытый ответ не занимает места */
+    padding: 0; /* Убираем внутренние отступы для скрытого ответа */
+    margin-top: 0; /* Убираем верхний отступ */
+    margin-bottom: 0;
+}
+
+.faq-item h3.active + .answer {
+    max-height: 500px; /* Максимальная высота для видимого содержимого */
+    padding: 5px 10px; /* Внутренние отступы для видимого ответа */
+    margin-top: 5px; /* Верхний отступ для видимого ответа */
+}
+
+.expiration-date {
+    max-width: 800px;
+    font-size: small;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #888888;
+}
+
+/* Кнопка печати */
+#print-page {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#office-directions, #first-day {
+    margin-top: 20px;
+}
+
+#office-directions {
+    margin-top: 20px;
+}
+
+.map-container {
+    width: 100%; 
+    height: 360px; /* Пропорциональное уменьшение высоты */
+    border-radius: 10px; /* Закругленные углы */
+    overflow: hidden; /* Скрывает части внутреннего содержимого, выходящие за пределы блока */
+    margin: 0 auto; /* Центрирование */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+#map {
+    width: 100%; /* Ширина заполняет обертку */
+    height: 100%; /* Высота заполняет обертку */
+}
+
+
+/* Адаптивный дизайн для меньших экранов */
+@media only screen and (max-width: 800px) {
+    header, section, footer {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+/*
+    #map {
+        height: 300px; 
+    }
+}
+*/

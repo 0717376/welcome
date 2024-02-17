@@ -1,0 +1,7 @@
+/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/bin/Release/net8.0/publish/welcomeApp
+/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/bin/Release/net8.0/publish/appsettings.Development.json
+/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/bin/Release/net8.0/publish/appsettings.json
+/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/bin/Release/net8.0/publish/welcomeApp.dll
+/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/bin/Release/net8.0/publish/welcomeApp.deps.json
+/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/bin/Release/net8.0/publish/welcomeApp.runtimeconfig.json
+/Users/sergeymuravskiy/Documents/dev/welcome/welcomeApp/bin/Release/net8.0/publish/welcomeApp.pdb
