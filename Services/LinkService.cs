@@ -2,16 +2,36 @@ using System;
 using System.Collections.Generic;
 using welcomeApp.Models;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace welcomeApp.Services
 {
     public class LinkService
     {
         private readonly Dictionary<Guid, LinkItem> _links = new Dictionary<Guid, LinkItem>();
+        private readonly OfficeLocationService _officeLocationService; // Добавлено
         private const int LinkDurationDays = 14; // Срок действия ссылки в днях
 
-        public LinkItem CreateLink(LinkRequest request)
+        // Добавлен конструктор для внедрения зависимости OfficeLocationService
+        public LinkService(OfficeLocationService officeLocationService)
         {
+            _officeLocationService = officeLocationService;
+        }
+
+        public async Task<LinkItem> CreateLink(LinkRequest request) // Изменено на асинхронный метод
+        {
+            // Получаем название города по региону
+            if (request.WorkStart == null)
+            {
+                throw new ArgumentException("WorkStart cannot be null");
+            }
+
+            var cityName = await _officeLocationService.GetCityNameByRegionAsync(request.WorkStart.Region);
+
+            // Получаем адрес офиса по названию города
+            var officeAddress = await _officeLocationService.GetOfficeAddressByCityNameAsync(cityName);
+
+            // Создаем элемент ссылки с добавленным адресом офиса
             var linkItem = new LinkItem
             {
                 Guid = Guid.NewGuid(),
@@ -21,6 +41,16 @@ namespace welcomeApp.Services
                 WorkStart = request.WorkStart,
                 ExpirationDate = DateTime.UtcNow.AddDays(LinkDurationDays)
             };
+
+            // Если адрес найден, обновляем информацию об офисе в WorkStart
+            if (!string.IsNullOrWhiteSpace(officeAddress))
+            {
+                linkItem.WorkStart.Office = new Office
+                {
+                    Address = officeAddress,
+                    IsRegional = request.WorkStart.Office?.IsRegional ?? false
+                };
+            }
 
             _links.Add(linkItem.Guid, linkItem);
 

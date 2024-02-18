@@ -3,6 +3,7 @@ using welcomeApp.Models;
 using welcomeApp.Services;
 using System;
 using System.Text;
+using System.Threading.Tasks; // Добавлено для поддержки асинхронности
 
 namespace welcomeApp.Controllers
 {
@@ -18,11 +19,11 @@ namespace welcomeApp.Controllers
         }
 
         [HttpPost("generateUrl")]
-        public IActionResult GenerateUrl([FromBody] LinkRequest request)
+        public async Task<IActionResult> GenerateUrl([FromBody] LinkRequest request) // Изменено на асинхронный метод
         {
             try
             {
-                var linkItem = _linkService.CreateLink(request);
+                var linkItem = await _linkService.CreateLink(request); // Добавлено await
                 var url = $"https://welcome.muravskiy.com/link/{linkItem.Guid}";
                 return Ok(new { url = url });
             }

@@ -30,7 +30,7 @@ namespace welcomeApp.Models
     {
         public DateTime StartDateTime { get; set; }
         public int Region { get; set; }
-        public Office? Office { get; set; } // Убедитесь, что это свойство добавлено
+        public Office? Office { get; set; } 
     }
     public class Office
     {
