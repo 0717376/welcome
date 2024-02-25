@@ -96,24 +96,31 @@ async function initMap() {
     );
 
     const address = '@Html.Raw(Model.WorkStart?.Office?.Address)'; // Вставляем адрес из модели данных
-    const geocodeUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=800741d9-0257-4522-a255-aa6608f4fe44&geocode=${encodeURIComponent(address)}&format=json`;
+    const geocodeUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=YOUR_API_KEY&geocode=${encodeURIComponent(address)}&format=json`;
 
     fetch(geocodeUrl)
         .then(response => response.json())
         .then(data => {
-            const position = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(' ');
-            const coordinates = [parseFloat(position[1]), parseFloat(position[0])];
+            console.log("Ответ от API Яндекс.Геокодера:", data); // Логируем весь ответ от API
 
-            const markerElement = document.createElement('img');
-            markerElement.className = 'icon-marker';
-            markerElement.src = '/images/logo_man.png';
-            markerElement.style.width = '75px';
-            markerElement.style.height = '75px';
+            // Проверка наличия необходимых данных в ответе
+            if (data.response && data.response.GeoObjectCollection.featureMember.length > 0) {
+                const position = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(' ');
+                const coordinates = [parseFloat(position[1]), parseFloat(position[0])];
 
-            const marker = new YMapMarker({coordinates: coordinates}, markerElement);
-            map.addChild(marker);
+                const markerElement = document.createElement('img');
+                markerElement.className = 'icon-marker';
+                markerElement.src = '/images/logo_man.png';
+                markerElement.style.width = '75px';
+                markerElement.style.height = '75px';
 
-            map.setLocation({center: coordinates, zoom: 16});
+                const marker = new YMapMarker({coordinates: coordinates}, markerElement);
+                map.addChild(marker);
+
+                map.setLocation({center: coordinates, zoom: 16});
+            } else {
+                console.log("Невозможно получить координаты для данного адреса");
+            }
         })
         .catch(error => console.error('Ошибка при получении координат: ', error));
 }
