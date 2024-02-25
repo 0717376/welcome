@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             checklist.style.maxHeight = checklist.scrollHeight + "px";
         }
     });
-    
+
     // Чек-лист документов
     const checklistItems = [
         'Паспорт или временное удостоверение личности',
@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const li = document.createElement('li');
         li.textContent = item;
 
-        // Восстанавливаем состояние из localStorage
         if (savedChecks.includes(index)) {
             li.classList.add('checked');
         }
@@ -50,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const checkedIndexes = Array.from(checkedItems).map(item => checklistItems.indexOf(item.textContent));
         localStorage.setItem('checkedDocuments', JSON.stringify(checkedIndexes));
     }
-
 
     // Вопросы FAQ
     const faqItems = document.querySelectorAll('.faq-item h3');
@@ -71,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('print-page').addEventListener('click', function() {
         window.print();
     });
+
+    initMap(); // Вызываем функцию инициализации карты
 });
 
 // Дополнительные стили для чек-листа и FAQ
@@ -81,12 +81,11 @@ async function initMap() {
     await ymaps3.ready;
     const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
 
-    // Инициализация карты
     const map = new YMap(
         document.getElementById('map'),
         {
             location: {
-                center: [37.620021, 55.728144],
+                center: [37.620021, 55.728144], // Значения по умолчанию, будут обновлены
                 zoom: 16
             }
         },
@@ -96,20 +95,25 @@ async function initMap() {
         ]
     );
 
-    // Создание метки
-    const markerElement = document.createElement('img');
-    markerElement.className = 'icon-marker';
-    markerElement.src = '/images/logo_man.png';
-    markerElement.style.width = '75px';  // Размеры иконки
-    markerElement.style.height = '75px';
+    const address = '@Html.Raw(Model.WorkStart?.Office?.Address)'; // Вставляем адрес из модели данных
+    const geocodeUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=800741d9-0257-4522-a255-aa6608f4fe44&geocode=${encodeURIComponent(address)}&format=json`;
 
-    // Координаты, где будет размещена метка
-    const markerCoordinates = [37.620021, 55.728144];
+    fetch(geocodeUrl)
+        .then(response => response.json())
+        .then(data => {
+            const position = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(' ');
+            const coordinates = [parseFloat(position[1]), parseFloat(position[0])];
 
-    // Добавление метки на карту
-    const marker = new YMapMarker({coordinates: markerCoordinates}, markerElement);
-    map.addChild(marker);
+            const markerElement = document.createElement('img');
+            markerElement.className = 'icon-marker';
+            markerElement.src = '/images/logo_man.png';
+            markerElement.style.width = '75px';
+            markerElement.style.height = '75px';
+
+            const marker = new YMapMarker({coordinates: coordinates}, markerElement);
+            map.addChild(marker);
+
+            map.setLocation({center: coordinates, zoom: 16});
+        })
+        .catch(error => console.error('Ошибка при получении координат: ', error));
 }
-
-initMap();
-
