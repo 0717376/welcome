@@ -104,7 +104,7 @@ async function initMap() {
         console.log("Ответ от API Яндекс.Геокодера:", data); // Логируем весь ответ от API
 
         // Извлекаем координаты из ответа
-        const pos = data.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(' ');
+        const pos = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(' ');
         const coordinates = [parseFloat(pos[1]), parseFloat(pos[0])]; // Первое число - широта, второе - долгота
 
         // Далее используйте извлеченные координаты для установки метки на карте
