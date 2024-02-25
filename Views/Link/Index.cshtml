@@ -12,9 +12,9 @@
     <script src="https://api-maps.yandex.ru/v3/?apikey=800741d9-0257-4522-a255-aa6608f4fe44&lang=ru_RU"></script>
     <script src="/js/script.js"></script>
     <script type="text/javascript">
-        // Преобразуем адрес в строку JSON
-        var officeAddress = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.WorkStart?.Office?.Address));
+        var officeAddress = '@Model.WorkStart?.Office?.Address.Replace("\r\n", " ").Replace("\n", " ").Replace("\r", " ")';
     </script>
+
 </head>
 <body>
     
