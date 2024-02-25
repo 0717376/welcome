@@ -94,14 +94,8 @@ async function initMap() {
             new YMapDefaultFeaturesLayer()
         ]
     );
-    // Удаляем переносы строк и лишние пробелы
-    var cleanedAddress = officeAddress.replace(/[\r\n]+/g, ' ').trim();
 
-    // Кодируем очищенный адрес для безопасной вставки в URL
-    const encodedAddress = encodeURIComponent(cleanedAddress);
-
-
-    const geocodeUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=800741d9-0257-4522-a255-aa6608f4fe44&geocode=${encodeURIComponent(encodedAddress)}&format=json`;
+    const geocodeUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=800741d9-0257-4522-a255-aa6608f4fe44&geocode=${encodeURIComponent(officeAddress)}&format=json`;
     console.log("Запрос к API Яндекс.Геокодера:", geocodeUrl); // Логируем запрос
 
     fetch(geocodeUrl)
