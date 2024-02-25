@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             checklist.style.maxHeight = checklist.scrollHeight + "px";
         }
     });
-
+    
     // Чек-лист документов
     const checklistItems = [
         'Паспорт или временное удостоверение личности',
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const li = document.createElement('li');
         li.textContent = item;
 
+        // Восстанавливаем состояние из localStorage
         if (savedChecks.includes(index)) {
             li.classList.add('checked');
         }
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const checkedIndexes = Array.from(checkedItems).map(item => checklistItems.indexOf(item.textContent));
         localStorage.setItem('checkedDocuments', JSON.stringify(checkedIndexes));
     }
+
 
     // Вопросы FAQ
     const faqItems = document.querySelectorAll('.faq-item h3');
@@ -69,8 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('print-page').addEventListener('click', function() {
         window.print();
     });
-
-    initMap(); // Вызываем функцию инициализации карты
 });
 
 // Дополнительные стили для чек-листа и FAQ
@@ -124,3 +124,6 @@ async function initMap() {
         })
         .catch(error => console.error('Ошибка при получении координат: ', error));
 }
+
+initMap();
+
