@@ -97,6 +97,7 @@ async function initMap() {
 
     const address = '@Html.Raw(Model.WorkStart?.Office?.Address)'; // Вставляем адрес из модели данных
     const geocodeUrl = `https://geocode-maps.yandex.ru/1.x/?apikey=800741d9-0257-4522-a255-aa6608f4fe44&geocode=${encodeURIComponent(address)}&format=json`;
+    console.log("Запрос к API Яндекс.Геокодера:", geocodeUrl); // Логируем запрос
 
     fetch(geocodeUrl)
         .then(response => response.json())
