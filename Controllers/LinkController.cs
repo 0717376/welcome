@@ -43,7 +43,7 @@ namespace welcomeApp.Controllers
                 return NotFound("The link is either invalid or has expired.");
             }
 
-            return View("Index", linkItem); // Используем View "Index" с моделью linkItem
+            return View("Index", linkItem);
         }
                 [HttpGet("GetCalendarFile/{guid}")]
         

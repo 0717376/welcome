@@ -107,8 +107,6 @@ async function initMap() {
         const pos = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(' ');
         const coordinates = [parseFloat(pos[0]), parseFloat(pos[1])]; // Первое число - широта, второе - долгота
 
-        // Далее используйте извлеченные координаты для установки метки на карте
-        // Пример для Yandex Maps:
         const markerElement = document.createElement('img');
         markerElement.className = 'icon-marker';
         markerElement.src = '/images/logo_man.png';
